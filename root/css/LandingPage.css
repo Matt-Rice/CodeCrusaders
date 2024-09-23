@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Futura;
+    src: url('../fonts/futura/futura\ light\ bt.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url('../fonts/futura/Futura\ Heavy\ font.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url('../fonts/futura/Futura\ Light\ Italic\ font.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.custom-navbar {
+    background-color: #2cd48b;
+    color: black;
+}
+
+.custom-navbar .nav-link {
+    color:black;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #e0e0e0;
+}
+
+
+body {
+    font-family: 'Futura', sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h2 {
+    font-style: italic;
+}
+
