@@ -1,6 +1,3 @@
-# CodeCrusaders
- This Repository will store the source code completed by the CodeCrusaders team for CS 400. 
-
  # Software Engineering Assignment 1
  # CS 400-ON
  # Software Design and Development
