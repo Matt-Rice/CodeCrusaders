@@ -1,0 +1,34 @@
+Interview 1
+Interview Date: 10/21/2024
+Interviewer: Matt Rice
+
+Summary
+•	It has a lot of potential. 
+•	The medicine notification part will be very beneficial for people that take a lot of medicine that are time dependent. 
+•	Like being able to search for recipes.
+•	
+Needs
+•	Personal Coach/Nutritionist approved diets and resources
+    o	Fitness Coach
+    o	Nutritionist
+    o	Will allow you to meet with them and they can help you develop a diet and workout routine if desired. 
+•	Searching for recipes
+•	Weight tracking
+•	Calories burned tracking 
+Ideas
+•	Have it track workouts/workout regiments in the future.
+    o	Potentially for an extra cost.
+•	How much would you charge for it? 
+    o	I said free.
+•	If released on IOS: 
+    o	Try to integrate it into Health app
+•	There’s limitation with MyFitnessPal because they don’t have barcode scanning
+    o	They don’t have a large database.
+•	Include some recipes
+    o	Maybe do web scraping and give credit. 
+Concerns
+•	Don’t lose track of your goal.
+•	Will it be optimized for a certain browser?
+    o	The browser shouldn’t matter, but it will likely be optimized for laptops/desktops rather than phone screens.
+•	Web scraping recipes could be a cause for copyright infringement.
+•	Meal plans should be nutritionist approved.
