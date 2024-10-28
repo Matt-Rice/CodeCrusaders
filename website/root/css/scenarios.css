@@ -1,0 +1,25 @@
+body {
+    background-color: #f9fafb;
+}
+.content-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.card {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    font-family: "Helvetica", sans-serif;
+}
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    font-family: Arial, sans-serif;
+}
+.tab-indent{
+    margin-left: 2em;
+}
