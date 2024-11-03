@@ -4,3 +4,4 @@ This Repository will store the source code and assignments completed by the Code
 ## Currently Completed:
 * Assignment 0
 * Assignment 1
+* Assignment 2
