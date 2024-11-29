@@ -1,4 +1,4 @@
-version: "3.8"  # Define the Docker Compose version
+#version: "3.8"  # Define the Docker Compose version
 
 services:
   frontend:
@@ -28,7 +28,8 @@ services:
   db:
     image: postgres:13          # Use the official PostgreSQL image
     ports:
-      - "5432:5432"             # Map port 5432 for the database
+      - "5432:5433"             # Map port 5432 for the database
+
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
