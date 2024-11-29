@@ -9,17 +9,17 @@ This Repository will store the source code and assignments completed by the Code
 In order to run:
 
 1. Clone the repository
-   '''bash
+   ```bash
    git clone https://github.com/Matt-Rice/CodeCrusaders
 
 2. Navigate to the WellMind directory
-   '''bash
+   ```bash
    cd WellMind
 
 3. Build the Docker Containers
-   '''bash
+   ```bash
    docker-compose build
 
 4. Run the containers
-   '''bash
+   ```bash
    docker-compose up
