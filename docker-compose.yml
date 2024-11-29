@@ -1,10 +1,40 @@
-version: '3.4'
+#version: "3.8"  # Define the Docker Compose version
 
 services:
-  wellmind:
-    image: wellmind
+  frontend:
     build:
-      context: .
-      dockerfile: ./Dockerfile
+      context: ./frontend       # Path to the frontend folder
+      dockerfile: Dockerfile    # Dockerfile for React app
     ports:
-      - 8000:8000
+      - "3000:80"               # Map port 80 in the container to port 3000 on the host
+    volumes:
+      - ./frontend:/app         # Mount the frontend code for live reload (optional for development)
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000  # Environment variable for API URL
+
+  backend:
+    build:
+      context: ./backend        # Path to the backend folder
+      dockerfile: Dockerfile    # Dockerfile for FastAPI app
+    ports:
+      - "8000:8000"             # Map port 8000 in the container to port 8000 on the host
+    volumes:
+      - ./backend:/app          # Mount the backend code for live reload (optional for development)
+    depends_on:
+      - db                      # Ensure backend starts after the database
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/mydb  # Database connection string
+
+  db:
+    image: postgres:13          # Use the official PostgreSQL image
+    ports:
+      - "5433:5433"             # Map port 5432 for the database
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+    volumes:
+      - db_data:/var/lib/postgresql/data  # Persist database data
+
+volumes:
+  db_data:                      # Named volume for database persistence
