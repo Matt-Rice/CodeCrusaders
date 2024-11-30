@@ -39,7 +39,8 @@ services:
   db:
     image: postgres:13          # Use the official PostgreSQL image
     ports:
-      - "5433:5433"             # Map port 5432 for the database
+      - "5432:5433"             # Map port 5432 for the database
+
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
