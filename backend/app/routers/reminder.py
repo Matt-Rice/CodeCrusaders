@@ -11,10 +11,7 @@ router = APIRouter(prefix="/reminders", tags=["reminders"])
 @router.put("/{reminder_id}", response_model=ReminderResponse)
 def upsert_reminder_endpoint(
     reminder_id: int,
-    time: str,
-    medicine: str,
-    dosage: str,
-    description: str = "",
+    reminder_data: ReminderCreate,
     db: Session = Depends(get_db)
 ):
     """
@@ -22,10 +19,7 @@ def upsert_reminder_endpoint(
 
     Args:
         reminder_id (int): The ID of the reminder to update or create.
-        time (str): The time of the reminder in 'YYYY-MM-DD HH:MM:SS' format.
-        medicine (str): The name of the medicine.
-        dosage (str): The dosage of the medicine.
-        description (str): Additional details (optional).
+        reminder_data (RemainderCreate): the request body of what you want to upsert in a json format 
         db (Session): The database session.
 
     Returns:
@@ -33,8 +27,8 @@ def upsert_reminder_endpoint(
     """
     
     try:
-        datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
-        reminder = upsert_reminder(db, reminder_id, time, medicine, dosage, description)
+        time = reminder_data.time.strftime("%Y-%m-%d %H:%M:%S")
+        reminder = upsert_reminder(db, reminder_id, time, reminder_data.medicine, reminder_data.dosage, reminder_data.description)
         return reminder
     except ValueError:
         raise HTTPException(status_code=422, detail="Invalid time format. Use 'YYYY-MM-DD HH:MM:SS'.")

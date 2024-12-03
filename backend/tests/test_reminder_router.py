@@ -51,19 +51,23 @@ def test_get_all_reminders(mock_get_db):
 
 
 def test_upsert_reminder(mock_get_db):
-    # Mock the database response for upserting a reminder
+    # Mock the database response
     mock_get_db.query.return_value.filter.return_value.first.return_value = None
 
-    # Simulate the PUT request to the `/reminders/{reminder_id}` route
+    # Test data
     reminder_data = {
-        "time": "2024-12-01 10:00:00",  # Ensure correct datetime format
-        "medicine": "Medicine A",
-        "dosage": "1 tablet",
-        "description": "Take with food"
+    "time": "2024-12-01T10:00:00",  # Ensure ISO 8601 format
+    "medicine": "Medicine A",
+    "dosage": "1 tablet",
+    "description": "Take with food"
     }
+
     response = client.put("/reminders/1", json=reminder_data)
 
-    # Validate the response
+    # Debug response
+    print(response.status_code)
+    print(response.json())
+
     assert response.status_code == 200
     data = response.json()
     assert data["id"] == 1
