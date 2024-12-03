@@ -1,0 +1,51 @@
+/*
+@font-face {
+    font-family: Futura;
+    src: url('../fonts/futura/futura\ light\ bt.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url('../fonts/futura/Futura\ Heavy\ font.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url('../fonts/futura/Futura\ Light\ Italic\ font.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+*/
+
+.custom-navbar {
+    background-color: #0d6efd;
+    color: black;
+}
+
+.custom-navbar .nav-link {
+    color:#fff6fe;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #e0e0e0;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+iframe {
+    margin: auto;
+}
+
