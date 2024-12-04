@@ -1,12 +1,10 @@
-version: "3.8"  # Define the Docker Compose version
-
 services:
   frontend:
     build:
       context: ./frontend       # Path to the frontend folder
       dockerfile: Dockerfile    # Dockerfile for React app
     ports:
-      - "3000:80"               # Map port 80 in the container to port 3000 on the host
+      - "3000:3000"               
     volumes:
       - ./frontend:/app         # Mount the frontend code for live reload (optional for development)
     environment:

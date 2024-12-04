@@ -8,7 +8,8 @@ from datetime import datetime
 
 router = APIRouter(prefix="/reminders", tags=["reminders"])
 
-@router.put("/{reminder_id}", response_model=ReminderResponse)
+
+@router.post("/{reminder_id}", response_model=ReminderResponse)
 def upsert_reminder_endpoint(
     reminder_id: int,
     reminder_data: ReminderCreate,
@@ -25,7 +26,6 @@ def upsert_reminder_endpoint(
     Returns:
         ReminderResponse: The created or updated reminder.
     """
-    
     try:
         time = reminder_data.time.strftime("%Y-%m-%d %H:%M:%S")
         reminder = upsert_reminder(db, reminder_id, time, reminder_data.medicine, reminder_data.dosage, reminder_data.description)
