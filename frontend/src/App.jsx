@@ -66,7 +66,7 @@ function App() {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../public/design_artifacts/design_artifacts.html">Design Artifacts</a>
+                <a className="nav-link" href="design_artifacts/design_artifacts.html">Design Artifacts</a>
               </li>
             </ul>
             <form className="d-flex">
