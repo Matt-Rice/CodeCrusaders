@@ -1,10 +1,11 @@
-# CodeCrusaders: Truong Le, Hayden Manton, Benjamin Powell, Matthew Rice
+# CodeCrusaders: Truong Le, Benjamin Powell, Matthew Rice
 This Repository will store the source code and assignments completed by the CodeCrusaders team for CS 400. 
 
 ## Currently Completed:
 * Assignment 0
 * Assignment 1
 * Assignment 2
+* Assignment 3
 
 In order to run:
 
@@ -14,12 +15,10 @@ In order to run:
 
 2. Navigate to the WellMind directory
    ```bash
-   cd WellMind
+   cd CodeCrusaders
 
-3. Build the Docker Containers
+3. Build and run the Docker Containers
    ```bash
-   docker-compose build
+   docker-compose up --build
 
-4. Run the containers
-   ```bash
-   docker-compose up
+
