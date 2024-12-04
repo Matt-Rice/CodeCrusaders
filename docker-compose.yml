@@ -1,12 +1,14 @@
+
 services:
   frontend:
     build:
       context: ./frontend       # Path to the frontend folder
       dockerfile: Dockerfile    # Dockerfile for React app
     ports:
-      - "3000:3000"               
+      - "3000:3000"             # Map port 3000
     volumes:
-      - ./frontend:/app         # Mount the frontend code for live reload (optional for development)
+      - ./frontend:/app         # Mount the frontend code for live reload
+      - /app/node_modules       # Exclude node_modules from being overwritten
     environment:
       - REACT_APP_API_URL=http://localhost:8000  # Environment variable for API URL
       - CHOKIDAR_USEPOLLING=true
@@ -19,7 +21,7 @@ services:
     ports:
       - "8000:8000"             # Map port 8000 in the container to port 8000 on the host
     volumes:
-      - ./backend:/app          # Mount the backend code for live reload (optional for development)
+      - ./backend:/app          # Mount the backend code for live reload
     depends_on:
       - db                      # Ensure backend starts after the database
     environment:
@@ -38,7 +40,6 @@ services:
     image: postgres:13          # Use the official PostgreSQL image
     ports:
       - "5433:5433"             # Map port 5432 for the database
-
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
