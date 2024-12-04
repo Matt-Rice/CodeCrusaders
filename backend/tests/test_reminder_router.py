@@ -62,7 +62,7 @@ def test_upsert_reminder(mock_get_db):
     "description": "Take with food"
     }
 
-    response = client.put("/reminders/1", json=reminder_data)
+    response = client.post("/reminders/1", json=reminder_data)
 
     # Debug response
     print(response.status_code)
