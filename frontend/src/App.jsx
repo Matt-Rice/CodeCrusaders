@@ -68,6 +68,9 @@ function App() {
               <li className="nav-item">
                 <a className="nav-link" href="design_artifacts/design_artifacts.html">Design Artifacts</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="design_architecture/design_architecture.html">Design Architecture</a>
+              </li>
             </ul>
             <form className="d-flex">
               <input

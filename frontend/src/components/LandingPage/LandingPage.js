@@ -199,6 +199,16 @@ const LandingPage = () => {
           title="WellMind Project Pitch"
         ></iframe>
       </div>
+
+      {/* Embedded Video */}
+      <div className="container text-center mt-5">
+        <h3>Prototype</h3>
+        <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2619912/sp/261991200/embedIframeJs/uiconf_id/45753661/partner_id/2619912?iframeembed=true&playerId=kaltura_player&entry_id=1_1ong9ai0&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_hrn1cbty" 
+          style = {{width:"400px", height:"285px", border: "0"}} 
+          allowfullscreen 
+          title="WellMind Prototype">
+        </iframe>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narrative</title>
+</head>
+<body>
+    <h1>Narrative</h1>
+    
+    <h2>Database System</h2>
+    <p>
+        We will likely use a PostgreSQL database because it is open source, free, and very flexible compared to other SQL database systems. 
+        It can support JSON data storage which will make it much easier to store user configurations efficiently due to its hierarchical structuring. 
+        The database system will have a multi-tenant architecture as it will minimize the cost of infrastructure in the long end while still allowing for the isolated storage 
+        of different user profiles, meal information, and other information.
+    </p>
+
+    <h2>Delivery Platform</h2>
+    <p>
+        The ideal delivery platform of this application would be mobile devices such as iOS and Android as users of the app need to be able to quickly access the app regularly. 
+        For users like Linda, who needs to manage her mom’s health remotely, and Bob, who needs to be able to track his fitness regularly and receive reminders while on the go, 
+        a mobile platform is the best option.
+    </p>
+
+    <h2>Server Platform</h2>
+    <p>
+        We will use a containerized platform using Docker to ensure there are no inconsistencies across different environments, i.e., nothing will have to be installed by the user. 
+        Docker also has a very active community and developer base and can run on any system that supports the container runtime.
+    </p>
+
+    <h2>Open-Source Products</h2>
+    <p>
+        We will use FastAPI as our backend framework because it is very lightweight and allows for quick building of APIs. It is also very beginner-friendly and easy to learn. 
+        We will also use ReactJS as our front-end framework as it is very beginner-friendly, has very concise and readable code, and has a large community. 
+        Docker will be used to create containers, GitHub for version control as it is very simple, and PostgreSQL for our database as previously mentioned.
+    </p>
+
+    <h2>Development Tools</h2>
+    <p>
+        For development, we will use an IDE such as VSCode since it has great support for Python, Docker, and JavaScript. 
+        We will use pytest to write unit tests for the backend of our API, and Docker for containerizing our API.
+    </p>
+
+    <a href="design_architecture.html">Back to Design Architecture</a>
+</body>
+</html>
